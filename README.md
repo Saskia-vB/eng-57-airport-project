@@ -13,12 +13,17 @@ Terminal
 Flight_trip:
 - destination
 - duration
-- origin
-- passenger_list
+- origin/ departure point
+- passenger_list (includes infants and children but does represent the same revenue)
 
-People: staff or passengers(passport)
-- tax number
-- name
+Tickets:
+- criteria 
+
+People: 
+- staff
+- passengers: name and passport number
+
+
 
 User_stories:
 - as an airport assistant I want to be able to create a passenger name AND passport number so that I can add them to flight
