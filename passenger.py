@@ -1,11 +1,15 @@
 class Passengers:
 
     def __init__(self, name, passport_number):
-        self.name = name
+        self.__name = str(name)
         self.__passport_number = passport_number
 
     def name(self):
         return self.name
+
+    def create_name(self, new_name):
+        self.__name = new_name
+        return new_name
 
     def get_passport_number(self):
         return self.__passport_number
