@@ -1,6 +1,6 @@
 # <user story> as an airport assistant I want to be able to create a flight_trip with a specific destination
 
-class Flight_trip():
+class Flight_trip:
 
     def __init__(self, destination, duration, origin, passenger_list=None):
         self.destination = destination

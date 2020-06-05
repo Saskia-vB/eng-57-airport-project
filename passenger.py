@@ -1,4 +1,4 @@
-class Passengers():
+class Passengers:
 
     def __init__(self, name, passport_number):
         self.name = name
@@ -13,4 +13,4 @@ class Passengers():
     def set_passport_number(self, new_passport_number):
         self.__passport_number = new_passport_number
         return new_passport_number
-    
+
