@@ -2,7 +2,7 @@
 
 class Flight_trip:
 
-    def __init__(self, destination, duration, origin, passenger_list= []):
+    def __init__(self, destination, duration, origin, passenger_list=[]):
         self.destination = destination
         self.duration = duration
         self.origin = origin
@@ -23,18 +23,17 @@ class Flight_trip:
         return self.origin
 
     # create passenger_list
+
+    def add_passenger_list(self, passenger):
+        self.passenger_list.append(passenger)
+        return 'passenger added'
+
     def get_list_of_passengers(self):
         return self.passenger_list
 
-    # def passenger_list(self, new_passenger):
-    #     self.passenger_list.append(new_passenger)
-    #     return self.passenger_list
-
-
     def get_passenger_list(self):
         new_passenger_list = []
-        for passenger in self.get_passenger_list:
-            new_passenger_list.append(passenger)
+        for passenger in self.passenger_list:
+            new_passenger_list.append(passenger.get_name())
         return new_passenger_list
 
-# blaablaa
