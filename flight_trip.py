@@ -36,3 +36,5 @@ class Flight_trip:
         for passenger in self.get_passenger_list:
             new_passenger_list.append(passenger)
         return new_passenger_list
+
+# blaablaa
