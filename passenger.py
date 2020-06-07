@@ -4,8 +4,8 @@ class Passengers:
         self.__name = str(name)
         self.__passport_number = passport_number
 
-    def name(self):
-        return self.name
+    def get_name(self):
+        return self.__name
 
     def create_name(self, new_name):
         self.__name = new_name
