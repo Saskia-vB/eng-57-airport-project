@@ -2,13 +2,16 @@
 
 class Flight_trip:
 
-    def __init__(self, destination, duration, origin, passenger_list=[]):
+    def __init__(self, destination, duration, origin, passenger_list=[], passport_list=[]):
         self.destination = destination
         self.duration = duration
         self.origin = origin
         if passenger_list is None:
             passenger_list = []
         self.passenger_list = passenger_list
+        if passport_list is None:
+            passport_list = []
+        self.passport_list = passport_list
 
 
 # create a flight trip with a specific destination
@@ -32,6 +35,12 @@ class Flight_trip:
     def get_list_of_passengers(self):
         return self.passenger_list
 
+    def add_passport_list(self, passport):
+        self.passport_list.append(passport)
+        return 'passport added'
+
+    def get_passport_list(self):
+        return self.passport_list
 
 
 

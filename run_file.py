@@ -4,7 +4,7 @@ from passenger import *
 # create a instance
 new_flight = Flight_trip(destination='rome', duration='1:00', origin='geneva')
 
-# new passenger
+# new passenger to passenger file
 new_passenger = Passengers(name='', passport_number='')
 input_name = input('enter name: ')
 input_passport_number = input('enter passport input: ')
@@ -25,11 +25,15 @@ user_input = input('add passenger: ')
 new_flight.add_passenger_list(user_input)
 
 # add a passport number to the new_flight
-new_flight.
+flight_passport = input('add passport: ')
+new_flight.add_passenger_list(flight_passport)
+print(new_flight.get_passport_list())
 # get the list of passengers
 print(new_flight.get_list_of_passengers())
 
 #
+
+
 
 # for passenger in new_flight.passenger_list:
 #     print(passenger.get_name())
