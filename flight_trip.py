@@ -3,22 +3,20 @@
 class Flight_trip:
 
     def __init__(self, destination, duration, origin, passenger_list=[], passport_list=[]):
-        # password = 'flight123'
-        # password_input = input('Please enter password: ')
-        # if password == password_input:
-        self.destination = destination
-        self.duration = duration
-        self.origin = origin
-        if passenger_list is None:
-            passenger_list = []
-        self.passenger_list = passenger_list
-        if passport_list is None:
-            passport_list = []
-        self.passport_list = passport_list
-
-
-        # else:
-        #     return 'wrong password'
+        password = 'flight123'
+        password_input = input('Please enter password: ')
+        if password == password_input:
+            self.destination = destination
+            self.duration = duration
+            self.origin = origin
+            if passenger_list is None:
+                passenger_list = []
+            self.passenger_list = passenger_list
+            if passport_list is None:
+                passport_list = []
+            self.passport_list = passport_list
+        else:
+            return 'wrong password'
 
 
 # create a flight trip with a specific destination
@@ -49,9 +47,7 @@ class Flight_trip:
     def get_passport_list(self):
         return self.passport_list
 
-    def create_passenger_dictionary(self):
-        keys = self.passport_list
-        values = self.passenger_list
+
         
 
 

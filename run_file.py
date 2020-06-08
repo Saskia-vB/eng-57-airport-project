@@ -1,12 +1,16 @@
 from flight_trip import *
 from passenger import *
 
+
 # create a instance for flight_trip
 new_flight = Flight_trip(destination='rome', duration='1:00', origin='geneva')
+
 # print(new_flight.destination, new_flight.duration, new_flight.origin)
+
 
 # new passenger for passenger file
 new_passenger = Passengers(name='', passport_number='')
+
 
 # continuously ask for input
 while True:
@@ -18,6 +22,10 @@ while True:
     print(new_passenger.get_name(), new_passenger.get_passport_number())
 
 
+    # add passenger as an object
+    # new_flight.add_passenger_list(new_passenger)
+    # print(new_passenger)
+
     # add a passenger to the new_flight
     user_input = input('add passenger to flight: ')
     new_flight.add_passenger_list(user_input)
@@ -27,6 +35,7 @@ while True:
     user_input2 = input('add passenger to flight: ')
     new_flight.add_passenger_list(user_input2)
     print(new_flight.passenger_list)
+
 
     # add a passport number to the new_flight
     flight_passport = input('add passport number to flight: ')
@@ -52,5 +61,4 @@ while True:
 # for passenger in new_flight.passenger_list:
 #     print(passenger.get_name())
 
-    # add passenger as an object
-    # new_flight.add_passenger_list(new_passenger)
+

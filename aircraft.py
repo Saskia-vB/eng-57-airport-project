@@ -1,5 +1,5 @@
 
 class Aircraft:
-    def __init__(self, aircraft_number, plane_type):
+    def __init__(self, aircraft_number, capacity):
         self.aircraft_number = aircraft_number
-        self.plane_type = plane_type
+        self.capacity = capacity

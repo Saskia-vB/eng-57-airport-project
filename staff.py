@@ -2,7 +2,7 @@ from people import *
 
 class Staff(People):
     def __init__(self, name, password):
-        super().__init__(name=name, tax_number= '')
+        super().__init__(name=name, tax_number='')
         self.__password = password
 
     def get_password(self):
