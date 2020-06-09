@@ -2,22 +2,31 @@
 
 class Flight_trip:
 
-    def __init__(self, destination, duration, origin, passenger_list=[], passport_list=[]):
-        password = 'flight123'
-        password_input = input('Please enter password: ')
-        if password == password_input:
-            self.destination = destination
-            self.duration = duration
-            self.origin = origin
-            if passenger_list is None:
-                passenger_list = []
-            self.passenger_list = passenger_list
-            if passport_list is None:
-                passport_list = []
-            self.passport_list = passport_list
-        else:
-            return 'wrong password'
+    def __init__(self, flight_number, destination, duration, origin, passenger_list=[], passport_number_list=[]):
+        # password = 'flight123'
+        # password_input = input('Please enter password: ')
+        # if password == password_input:
+        self.flight_number = flight_number
+        self.destination = destination
+        self.duration = duration
+        self.origin = origin
+        if passenger_list is None:
+            passenger_list = []
+        self.passenger_list = passenger_list
+        if passport_number_list is None:
+            passport_number_list = []
+        self.passport_number_list = passport_number_list
+        # else:
+        #     return 'wrong password'
 
+# create a flight
+
+    def get_flight_number(self):
+        return self.flight_number
+
+    def create_flight_number(self, new_flight_number):
+        self.flight_number = new_flight_number
+        return new_flight_number
 
 # create a flight trip with a specific destination
 
@@ -33,19 +42,29 @@ class Flight_trip:
 
     # create passenger_list
 
-    def add_passenger_list(self, passenger):
-        self.passenger_list.append(passenger)
-        return 'passenger added'
+    def get_passenger_details(self):
+        return self.passenger_list, self.passport_number_list
 
-    def get_list_of_passengers(self):
-        return self.passenger_list
+    def add_passenger_details(self, new_passenger, new_passport_number):
+        self.passenger_list.append(new_passenger)
+        self.passport_number_list.append(int(new_passport_number))
+        return self.passenger_list, self.passport_number_list
 
-    def add_passport_list(self, passport):
-        self.passport_list.append(passport)
-        return 'passport added'
 
-    def get_passport_list(self):
-        return self.passport_list
+
+    # def add_passenger_list(self, passenger):
+    #     self.passenger_list.append(passenger)
+    #     return 'passenger added'
+    #
+    # def get_list_of_passengers(self):
+    #     return self.passenger_list
+    #
+    # def add_passport_list(self, passport):
+    #     self.passport_list.append(passport)
+    #     return 'passport added'
+    #
+    # def get_passport_list(self):
+    #     return self.passport_list
 
 
         
@@ -54,10 +73,4 @@ class Flight_trip:
 
 
 
-    #
-    # def get_passenger_list(self):
-    #     new_passenger_list = []
-    #     for passenger in self.passenger_list:
-    #         new_passenger_list.append(passenger.get_name())
-    #     return new_passenger_list
 

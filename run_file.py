@@ -9,7 +9,7 @@ new_flight = Flight_trip(destination='rome', duration='1:00', origin='geneva')
 
 
 # new passenger for passenger file
-new_passenger = Passengers(name='', passport_number='')
+new_passenger = Passengers(f_name='', passport_number='')
 
 
 # continuously ask for input
@@ -58,6 +58,9 @@ while True:
     dictionary = dict(zip(new_flight.passenger_list, new_flight.passport_list))
     print(dictionary)
 
+    # change plane to flight_trip
+    for flight in flight_trip:
+        new_flight
 # for passenger in new_flight.passenger_list:
 #     print(passenger.get_name())
 
